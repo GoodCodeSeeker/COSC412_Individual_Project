@@ -12,3 +12,7 @@ October 14 to October 20: Make a main page with other functions: add budget item
 October 21 to October 27: Make a login page
 October 28 to November 3: Make database connection to MongoDB
 November 4 to Novemeber 10: Polishing the app and testing
+
+Justification:
+I prefer to work in a way from the easiest component to the most challenging component. 
+I find implementing the logical part of the web app to be the simplest and making login page and database connection to be the most challenging.
