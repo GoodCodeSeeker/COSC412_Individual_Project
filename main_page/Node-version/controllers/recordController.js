@@ -2,7 +2,6 @@ const express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 const Record = mongoose.model('Record');
-
 router.get('/', (req, res) => {
     res.render("record/addOrEdit", {
         viewTitle: "Insert Record"
@@ -69,7 +68,6 @@ router.get('/list', (req, res) => {
         }
     });
 });
-
 
 function handleValidationError(err, body) {
     for (field in err.errors) {
