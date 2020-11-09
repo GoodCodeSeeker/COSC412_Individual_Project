@@ -1,0 +1,53 @@
+<%- include('partials/header') -%>
+
+<% if (locals.isAuthenticated) { %>
+    <p>You are logged in. <a href="/profile" class="underline">View your profile</a>.</p>
+
+    <div class="container mt-4">
+        <h1>Record</h1>
+  
+        <a
+          href="/create"
+          class="btn btn-success my-4"
+        >
+          Create new record
+        </a>
+  
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Date</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+  
+              <% if (arrayRecord.length > 0) { %>
+  
+                  <% arrayRecord.forEach(record => { %>
+  
+                      <tr>
+                        <th scope="row"><%= record.id %> </th>
+                        <td><%= record.itemName %> </td>
+                        <td><%= record.amount %> </td>
+                        <td><%= record.date %> </td>
+                        <td>
+                          <a href="/<%= record.id %>" class="btn btn-warning btn-sm">Edit</a>
+                        </td>
+                      </tr>
+  
+                  <% }) %>
+              <% } %>
+  
+          </tbody>
+        </table>
+      </div>
+
+<% } else { %>
+    <p>You are not logged in. <a href="/login" class="underline">Login</a>.</p>
+<% } %>
+
+<%- include('partials/footer') -%>
