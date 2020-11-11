@@ -1,7 +1,7 @@
 {
   "name": "mppejs",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server",
     "devStart": "nodemon src/server"
