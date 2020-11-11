@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Record = require('../models/record-model');
-const bodyParser = require('body-parser')
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const bodyParser = require('body-parser');
+const { check, validationResult } = require('express-validator');
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 router.get('/', async (req, res) => {
     
