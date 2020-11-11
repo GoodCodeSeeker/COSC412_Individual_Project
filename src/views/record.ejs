@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node</title>
+    <%- include('partials/header.ejs') %>
+  </head>
+  <body>
+
+    <div class="container mt-4">
+      <h1>Record</h1>
+
+      <a
+        href="/create"
+        class="btn btn-success my-4"
+      >
+        Create new record
+      </a>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            <% if (arrayRecord.length > 0) { %>
+
+                <% arrayRecord.forEach(record => { %>
+
+                    <tr>
+                      <th scope="row"><%= record.id %> </th>
+                      <td><%= record.itemName %> </td>
+                      <td><%= record.amount %> </td>
+                      <td>
+                        <a href="/<%= record.id %>" class="btn btn-warning btn-sm">Edit</a>
+                      </td>
+                    </tr>
+
+                <% }) %>
+            <% } %>
+
+        </tbody>
+      </table>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

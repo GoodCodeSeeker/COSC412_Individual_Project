@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+    <%- include('partials/header.ejs') %> 
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1>Create</h1>
+        <form action="/" method="POST" class="mt-4">
+            <div class="form-group">
+            <label for="itemName" class="form-label">Item Name:</label>
+            <input type="text" class="form-control" name="itemName" placeholder="Item Name">
+            </div>
+            <div class="form-group">
+            <label for="amount" class="form-label">Amount:</label>
+            <input type="text" class="form-control" name="amount" placeholder="Amount">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">
+                Add Record
+            </button>
+        </form>
+    </div>
+
+    <%- include('partials/footer.ejs') %> 
+</body>
+</html>

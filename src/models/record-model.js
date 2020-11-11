@@ -2,13 +2,12 @@ const mongoose = require('mongoose');
 
 var recordSchema = new mongoose.Schema({
     itemName: {
-        type: String
+        type: String,
+        required: 'This field is required.'
     },
     amount: {
-        type: String
-    },
-    date:{
-        type: String
+        type: Number,
+        required: 'This field is required.'
     }
 });
 
