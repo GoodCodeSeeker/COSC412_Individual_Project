@@ -92,6 +92,7 @@
 
         const itemName = document.querySelector('#itemNameInput').value;
         const amount = document.querySelector('#amountInput').value;
+        const date = document.querySelector('#dateInput').value;
 
         const id = formEdit.dataset.id
 
@@ -102,7 +103,7 @@
             headers: {
               'Content-Type' : 'application/json'
             },
-            body: JSON.stringify({itemName, amount})
+            body: JSON.stringify({itemName, amount, date})
           })
 
           const res = await data.json()
