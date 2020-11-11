@@ -1,10 +1,9 @@
 {
-  "name": "mppejs",
+  "name": "COSC412_Individual_Project",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "devStart": "nodemon src/server.js"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
