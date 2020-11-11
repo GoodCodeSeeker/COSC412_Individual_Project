@@ -102,7 +102,7 @@ router.put('/:id', async (req, res) => {
         
         res.json({
             status: true,
-            mensaje: 'Editado'
+            message: 'Edited'
         })
 
     } catch (error) {
@@ -110,7 +110,7 @@ router.put('/:id', async (req, res) => {
 
         res.json({
             status: false,
-            mensaje: 'No editado'
+            message: 'Not edited'
         })
 
     }
