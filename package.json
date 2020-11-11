@@ -1,7 +1,6 @@
 {
   "name": "mppejs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/server",
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodCodeSeeker/COSC412_Individual_Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GoodCodeSeeker/COSC412_Individual_Project/issues"
+  },
+  "homepage": "https://github.com/GoodCodeSeeker/COSC412_Individual_Project#readme",
+  "description": ""
 }
