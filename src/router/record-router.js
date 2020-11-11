@@ -22,14 +22,27 @@ router.get('/create', (req, res) => {
     res.render('create')
 });
 
-router.post('/', async (req, res) => {
-    const body = req.body
+router.post('/', urlencodedParser,[
+    check('itemName',"Item Name cannot be empty.").exists(),
+    check('amount', "Amount cannot be empty or non numeric.").exists().isCurrency({require_symbol: false, allow_decimal: true, require_decimal: false, digits_after_decimal: [2]}),
+    check('date',"date not in format of YYYY/MM/DD").exists().isDate()
+],async (req, res) => {
+    const errors = validationResult(req)
+    if(!errors.isEmpty()) {
+        const alert = errors.array()
+        res.render('create', {
+            alert
+        })
+}else{
+    const body = req.body;
+
     try {
         await Record.create(body)
         res.redirect('/')
     } catch (error) {
         console.log(error)
     }
+}
 });
 
 router.get('/:id', async (req, res) => {
