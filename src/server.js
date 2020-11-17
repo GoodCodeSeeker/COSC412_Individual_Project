@@ -27,7 +27,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-app.use('/', require('./router/record-router.js'));
+app.use('/', require('./router/index-router.js'));
+app.use('/record', require('./router/record-router.js'));
 
 app.use((req, res, next) => {
     res.status(404).render('404')

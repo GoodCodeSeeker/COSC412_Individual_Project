@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Node</title>
+    <title>Rocord Storage</title>
     <%- include('partials/header.ejs') %>
   </head>
   <body>
-
+    <%- include('partials/navbar.ejs') %>
     <div class="container mt-4">
       <h1>Record Detail</h1>
       <% if (error) { %>
       <p><%= message %></p>
-      <a href="/" class="btn btn-dark btn-block">Back to Record</a>
+      <a href="/record" class="btn btn-dark btn-block">Back to Record</a>
 
       <% } %> <% if (!error) { %>
 
@@ -69,13 +69,13 @@
         const id = btnDelete.dataset.id
         console.log('id', id)
         try {
-          const data = await fetch(`/${id}`, {
+          const data = await fetch(`/record/${id}`, {
             method: 'delete'
           })
           const res = await data.json()
 
           if (res.status) {
-            window.location.href = '/'
+            window.location.href = '/record'
           } else {
             console.log(res)
           }
@@ -98,7 +98,7 @@
 
         try {
 
-          const data = await fetch(`/${id}`, {
+          const data = await fetch(`/record/${id}`, {
             method: 'put',
             headers: {
               'Content-Type' : 'application/json'
@@ -109,7 +109,7 @@
           const res = await data.json()
 
           if(res.status){
-            window.location.href = '/'
+            window.location.href = '/record'
           } else {
             console.log(res)
           }

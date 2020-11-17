@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node</title>
+    <title>Record Storage</title>
     <%- include('partials/header.ejs') %> 
 </head>
 <body>
+    <%- include('partials/navbar.ejs') %>
     <% if(typeof alert != 'undefined') { %>
         <% alert.forEach(function(error) { %>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -19,7 +20,7 @@
     <% } %>
     <div class="container mt-4">
         <h1>Create</h1>
-        <form action="/" method="POST" class="mt-4">
+        <form action="/record" method="POST" class="mt-4">
             <div class="form-group">
             <label for="itemName" class="form-label">Item Name:</label>
             <input type="text" class="form-control" name="itemName" placeholder="Item Name">

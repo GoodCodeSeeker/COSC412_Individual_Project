@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Node</title>
+    <title>Record Storage</title>
     <%- include('partials/header.ejs') %>
   </head>
   <body>
-
+    <%- include('partials/navbar.ejs') %>
     <div class="container mt-4">
       <h1>Record</h1>
 
       <a
-        href="/create"
+        href="/record/create"
         class="btn btn-success my-4"
       >
         Create new record
@@ -40,7 +40,7 @@
                       <td><%= record.amount %> </td>
                       <td><%= record.date %> </td>
                       <td>
-                        <a href="/<%= record.id %>" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="record/<%= record.id %>" class="btn btn-warning btn-sm">Edit</a>
                       </td>
                     </tr>
 
