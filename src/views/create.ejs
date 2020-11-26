@@ -7,7 +7,7 @@
     <%- include('partials/header.ejs') %> 
 </head>
 <body>
-    <%- include('partials/navbar.ejs') %>
+    <%- include('partials/navbar-logged.ejs') %>
     <% if(typeof alert != 'undefined') { %>
         <% alert.forEach(function(error) { %>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">

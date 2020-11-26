@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+
 router.get('/', async (req, res) => {
     
     try {

@@ -7,13 +7,13 @@
     <%- include('partials/header.ejs') %> 
 </head>
 <body>
-    <%- include('partials/navbar.ejs') %>
-    
-    <div class="container mt-4">
-        <h1>Hello, this is a page for storage records</h1>
-    </div>
+    <%- include('partials/navbar-logged.ejs') %>
+<div class="container">
+<h1>Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+</div>
 
 
-    <%- include('partials/footer.ejs') %> 
+<%- include('partials/footer.ejs') %> 
 </body>
 </html>
