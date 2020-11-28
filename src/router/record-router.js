@@ -42,7 +42,7 @@ router.post('/', urlencodedParser,[
 
     try {
         await Record.create(body)
-        res.redirect('/')
+        res.redirect('/dashboard')
     } catch (error) {
         console.log(error)
     }
@@ -50,9 +50,9 @@ router.post('/', urlencodedParser,[
 });
 
 router.get('/:id', async (req, res) => {
-    
+
     const id = req.params.id
-    
+
     try {
         const recordDB = await Record.findOne({ _id: id })
         console.log(recordDB);
